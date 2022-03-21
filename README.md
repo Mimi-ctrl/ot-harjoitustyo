@@ -6,4 +6,3 @@
 [gitlog.txt](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 :shipit::shipit::shipit::shipit::shipit::shipit:
-Tämä on muutos
