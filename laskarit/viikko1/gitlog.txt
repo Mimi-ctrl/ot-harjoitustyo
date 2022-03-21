@@ -1,0 +1,113 @@
+commit d74dd04d1ad2854acf84a7f4d1cb327a8f70060a
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 20:31:32 2022 +0200
+
+    poisto ja uudelleen nimentä
+
+ tiedostoja/file1             | 0
+ tiedostoja/{file2 => file22} | 0
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 71e6e22605e6c0eec3b2e5447dbdb078f47e01bb
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 20:21:12 2022 +0200
+
+    Hakemisto luotu ja tiedostot lisätty.
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 602ec2e17fdfd619d7d89ff0ceb03b3f38ff9b26
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 20:06:29 2022 +0200
+
+    Lisäyksiä ja poistoja tehty eka.txt ja kolmas.txt.
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 8bb4f54aa3e81d65a07956897c7cb34fb6691c6a
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 20:03:06 2022 +0200
+
+    Uudellen nimentä.
+
+ eka.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 5cab2393433c447236c41f09a40d229ccd8543cf
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:58:45 2022 +0200
+
+    toinen.txt poistettu.
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 73ab0d4f4fbb29e1e1f210f30e5b5c1d7c622ea4
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:52:18 2022 +0200
+
+    Tekstin poisto ja lisäys.
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e68e70166e7ecf27d392e8177bca758a0d9957c1
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:48:27 2022 +0200
+
+    Tekstin lisäys.
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit bec3abac38f85965c9e98560ea2709709fd228a2
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:35:35 2022 +0200
+
+    Uusi hakemisto ja tiedosto.
+
+ stuff/jokin | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 011a6d7f9f39586fa1bd43386a307a76428d69de
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:29:26 2022 +0200
+
+    muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit bb1691d59cad2f32748d0c7d838ae5a72391c537
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 19:25:33 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8b15fc3a5a80a7e0cc0717fd103e6439e8722dbd
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 17:42:18 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit c12b231ae9eb7d5754a0b78313d45c9a1d29c00f
+Author: Laura Peltonen <laura.peltonen53@gmail.com>
+Date:   Mon Mar 21 17:31:29 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
