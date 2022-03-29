@@ -1,7 +1,7 @@
 # Vaatimusmäärittely
 ## Sovelluksen nimi: Pong
 ### Sovelluksen tarkoitus
-Käyttäjä pystyy sovelluksen avulla pelaamaan pong peliä. Peliä pystyy pelaamaan 2 käyttäjää samalta näppäimistöltä.
+Käyttäjä pystyy sovelluksen avulla pelaamaan pong peliä. Peliä pystyy pelaamaan 2 käyttäjää samaan aikaan samalta näppäimistöltä.
 
 ### Sovelluksen ulkonäkö
 Sovellus tulee näyttämään suurinpiirtein tältä:
