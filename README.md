@@ -5,4 +5,7 @@
 
 [gitlog.txt](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
+#### Vaatimusmäärittely
+[vaatimusmaarittely.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 :shipit::shipit::shipit::shipit::shipit::shipit:
