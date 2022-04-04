@@ -12,7 +12,7 @@ ball = pygame.image.load(os.path.join(dirname, "objects", "red_ball.png"))
 
 x = 0
 y = 0
-speed = 4
+speed = 7
 clock = pygame.time.Clock()
 
 while True:
@@ -25,7 +25,8 @@ while True:
 	pygame.display.flip()
 
 	x += speed
-	if speed > 0 and x + ball.get_width() >= 880:
+	y += speed
+	if speed > 0 and x + ball.get_width() >= width:
 		speed =- speed
 	if speed < 0 and x <= 0:
 		speed =- speed
