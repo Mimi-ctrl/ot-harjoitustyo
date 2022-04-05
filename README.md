@@ -9,10 +9,16 @@
 ## Komentorivitoiminnot
 #### Ohjelman suorittaminen
 Ohjelma käynnistyy:
-##### poetry run invoke start
+```
+poetry run invoke start
+```
+#### Testaus
 Suorittaa testit pytestin avulla:
-##### poetry run invoke test
+```
+poetry run invoke test
+```
+#### Testikattavuus
 Muodostaa selaimessa avattavan HTML-muotoisen testikattavuusraportin:
-##### poetry run invoke coverage-report
-
-:shipit::shipit::shipit::shipit::shipit::shipit:
+```
+poetry run invoke coverage-report
+```
