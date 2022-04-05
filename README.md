@@ -10,6 +10,8 @@
 
 [tuntikirjanpito.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[changelog.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
 ## Komentorivitoiminnot
 #### Ohjelman suorittaminen
 Ohjelma käynnistyy:
