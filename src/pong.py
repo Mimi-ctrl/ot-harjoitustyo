@@ -25,6 +25,15 @@ def redraw():
 	screen.fill((118,238,198))
 	all_sprites.draw(screen)
 	pygame.display.update()
+	key = pygame.key.get_pressed()
+	if key[pygame.K_w]:
+		board1.rect.y -= 1
+	if key[pygame.K_s]:
+		board1.rect.y += 1
+	if key[pygame.K_UP]:
+		board2.rect.y -= 1
+	if key[pygame.K_DOWN]:
+		board2.rect.y += 1
 
 while True:
 	for event in pygame.event.get():
