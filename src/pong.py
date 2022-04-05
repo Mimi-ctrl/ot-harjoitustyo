@@ -1,34 +1,21 @@
 import pygame
-import os
+import os	
 
 dirname = os.path.dirname(__file__)
-
 pygame.init()
+
 width = 880
 height = 880
 screen = pygame.display.set_mode((width,height))
+pygame.display.set_caption("Pong")
 
-ball = pygame.image.load(os.path.join(dirname, "objects", "red_ball.png"))
-
-x = 0
-y = 0
-speed = 7
-clock = pygame.time.Clock()
+icon = pygame.image.load(os.path.join(dirname, "objects", "icon.png"))
+pygame.display.set_icon(icon)
 
 while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
-			
-	screen.fill((118,238,198))
-	screen.blit(ball, (x, y))
-	pygame.display.flip()
 
-	x += speed
-	y += speed
-	if speed > 0 and x + ball.get_width() >= width:
-		speed =- speed
-	if speed < 0 and x <= 0:
-		speed =- speed
-		
-	clock.tick(60)
+	screen.fill((118,238,198))
+	pygame.display.update()
