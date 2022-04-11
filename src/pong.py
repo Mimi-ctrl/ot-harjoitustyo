@@ -25,16 +25,6 @@ ball = Ball()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(board1,board2,ball)
 
-# def draw():
-	#text (pisteet, näppäin ohjeet)	
-	#lopputeksti jossa näkyy voittaja ja pisteet
-	#pelin aloitus enter
-
-#def new_game():
-
-#fed game_ovet():
-#kun pisteet ovat 20
-
 def redraw():
 	screen.fill((118,238,198))
 	all_sprites.draw(screen)
@@ -49,12 +39,9 @@ def redraw():
 		board2.rect.y -= board_speed
 	if key[pygame.K_DOWN]:
 		board2.rect.y += board_speed
-	#if key[pygame.K_F2]:
-		#newgame
 	if key[pygame.K_ESCAPE]:
 		exit()
-	#if key[pygame.K_ENTER:
-		#pause/start
+
 	ball.rect.x += ball.speed * ball.dx
 	ball.rect.y += ball.speed * ball.dy
 
