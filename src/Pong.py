@@ -48,6 +48,26 @@ def keyboard():
 	if key[pygame.K_ESCAPE]:
 		exit()
 
+def texts():
+	yellow = 255, 255, 0
+
+	bong_font = pygame.font.SysFont("D050000L",300)
+	text = bong_font.render("H", False, yellow)
+	textRect = text.get_rect()
+	textRect.center = (375, 250)
+	screen.blit(text, textRect)
+
+	points_font = pygame.font.SysFont("Linux Biolinum Keyboard O",50)
+	p1_points = points_font.render(str(board1.points), False, yellow)
+	p1Rect = p1_points.get_rect()
+	p1Rect.center = (750 // 3, 25)
+	screen.blit(p1_points, p1Rect)
+
+	p2_points = points_font.render(str(board2.points), False, yellow)
+	p2Rect = p2_points.get_rect()
+	p2Rect.center = (550, 25)
+	screen.blit(p2_points, p2Rect)
+
 def ball_move():
 	ball.rect.x += ball.speed * ball.dx
 	ball.rect.y += ball.speed * ball.dy
@@ -75,7 +95,8 @@ def ball_move():
 		ball.dx = -1
 
 def redraw():
-	screen.fill((118,238,198))
+	screen.fill((255,131,250))
+	texts()
 	all_sprites.draw(screen)
 	pygame.display.update()
 	keyboard()
