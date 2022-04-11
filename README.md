@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Pong peli :red_circle:
 ## Dokumentaatiot
 [vaatimusmaarittely.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
