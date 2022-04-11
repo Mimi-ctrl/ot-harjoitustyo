@@ -8,7 +8,7 @@ Sovellus tulee näyttämään suurinpiirtein tältä:
 ![Nimetön piirustus](https://user-images.githubusercontent.com/56686737/160657768-796fc737-26c5-4043-8621-a5d20b077c7e.png)
 ### Toiminnallisuudet
 #### Pelin kulku
-* Käyttäjä pystyy aloittamaan pelin painamalla enter näppäintä.
+* Käyttäjä pystyy aloittamaan sekä pistämään tauolle pelin painamalla enter näppäintä.
 * Pelissä tulee osua palloon laudalla jolloin se kimpoaa poispäin.
 * Peli päättyy, kun toisella pelaajista on kertynyt 20 pistettä. Pisteet nollautuvat samalla.
 #### Ohjaus
