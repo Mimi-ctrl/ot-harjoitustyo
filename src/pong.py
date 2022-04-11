@@ -25,11 +25,17 @@ ball = Ball()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(board1,board2,ball)
 
-def redraw():
-	screen.fill((118,238,198))
-	all_sprites.draw(screen)
-	pygame.display.update()
+def boards_max_positions():
+	if board1.rect.y <= 0:
+		board1.rect.y = 0
+	if board2.rect.y <= 0:
+		board2.rect.y = 0
+	if board1.rect.y >= 525:
+		board1.rect.y = 525
+	if board2.rect.y >= 525:
+		board2.rect.y = 525
 
+def keyboard():
 	key = pygame.key.get_pressed()
 	if key[pygame.K_w]:
 		board1.rect.y -= board_speed
@@ -42,6 +48,7 @@ def redraw():
 	if key[pygame.K_ESCAPE]:
 		exit()
 
+def ball_move():
 	ball.rect.x += ball.speed * ball.dx
 	ball.rect.y += ball.speed * ball.dy
 
@@ -67,8 +74,17 @@ def redraw():
 	if board2.rect.colliderect(ball.rect):
 		ball.dx = -1
 
+def redraw():
+	screen.fill((118,238,198))
+	all_sprites.draw(screen)
+	pygame.display.update()
+	keyboard()
+	boards_max_positions()
+	ball_move()
+
+
 while True:
-	pygame.time.delay(100)
+	pygame.time.delay(50)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
