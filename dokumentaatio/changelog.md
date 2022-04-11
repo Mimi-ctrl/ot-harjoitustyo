@@ -7,3 +7,5 @@
 #### Viikko 4:
 * Pelin laudat ja pallo liikkuvat oikein.
 * Pallo aloittaa keskeltä kun se ei osu lautaan
+* Pisteet näkyvät.
+* Pelin voi sulkea ESC näppäimestä.
