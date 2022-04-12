@@ -107,10 +107,10 @@ def redraw():
 	board1_get_point()
 	board2_get_point()
 
-
 while True:
 	pygame.time.delay(50)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
 	redraw()
+	
