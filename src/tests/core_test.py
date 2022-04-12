@@ -1,3 +1,4 @@
+from pkgutil import ModuleInfo
 import unittest
 from Pong import Points
 
@@ -5,6 +6,9 @@ class TestCore(unittest.TestCase):
     def setUp(self):
         self.board1 = Points(0)
         self.board2 = Points(0)
+
+  # def test_points_are_correctly_at_the_start():
+       
 
    # def test_boar1_get_points_and_board2_not():
 

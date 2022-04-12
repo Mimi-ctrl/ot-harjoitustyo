@@ -68,6 +68,18 @@ def texts():
 	p2Rect.center = (550, 25)
 	screen.blit(p2_points, p2Rect)
 
+def board1_get_point():
+	if ball.rect.x > 690:
+		ball.rect.x, ball.rect.y = 375, 250
+		ball.dx = -1
+		board1.points += 1
+	
+def board2_get_point():
+	if ball.rect.x  < 0:
+		ball.rect.x, ball.rect.y = 375, 250
+		ball.dx = 1
+		board2.points += 1
+
 def ball_move():
 	ball.rect.x += ball.speed * ball.dx
 	ball.rect.y += ball.speed * ball.dy
@@ -75,18 +87,8 @@ def ball_move():
 	if ball.rect.y > 590:
 		ball.dy = -1
 
-	if ball.rect.x > 690:
-		ball.rect.x, ball.rect.y = 375, 250
-		ball.dx = -1
-		board1.points += 1
-
 	if ball.rect.y < 0:
 		ball.dy = 1
-
-	if ball.rect.x  < 0:
-		ball.rect.x, ball.rect.y = 375, 250
-		ball.dx = 1
-		board2.points += 1
 	
 	if board1.rect.colliderect(ball.rect):
 		ball.dx = 1
@@ -102,6 +104,8 @@ def redraw():
 	keyboard()
 	boards_max_positions()
 	ball_move()
+	board1_get_point()
+	board2_get_point()
 
 
 while True:
