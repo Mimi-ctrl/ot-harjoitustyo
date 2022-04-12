@@ -1,5 +1,5 @@
-import pygame
 import os
+import pygame
 from sprites.ball import Ball
 from sprites.board import Board1, Board2
 
@@ -11,15 +11,13 @@ def __init__(self):
 dirname = os.path.dirname(__file__)
 pygame.init()
 
-width = 750
-height = 650
-screen = pygame.display.set_mode((width, height))
+screen = pygame.display.set_mode((750, 650))
 pygame.display.set_caption("Pong")
 
 icon = pygame.image.load(os.path.join(dirname, "objects", "icon.png"))
 pygame.display.set_icon(icon)
 
-board_speed = 90
+BOARD_SPEED = 90
 board1 = Board1()
 board2 = Board2()
 ball = Ball()
@@ -42,13 +40,13 @@ def boards_max_positions():
 def keyboard():
     key = pygame.key.get_pressed()
     if key[pygame.K_w]:
-        board1.rect.y -= board_speed
+        board1.rect.y -= BOARD_SPEED
     if key[pygame.K_s]:
-        board1.rect.y += board_speed
+        board1.rect.y += BOARD_SPEED
     if key[pygame.K_UP]:
-        board2.rect.y -= board_speed
+        board2.rect.y -= BOARD_SPEED
     if key[pygame.K_DOWN]:
-        board2.rect.y += board_speed
+        board2.rect.y += BOARD_SPEED
     if key[pygame.K_ESCAPE]:
         exit()
 
@@ -58,51 +56,51 @@ def texts():
 
     bong_font = pygame.font.SysFont("D050000L", 300)
     text = bong_font.render("H", False, yellow)
-    textRect = text.get_rect()
-    textRect.center = (375, 250)
-    screen.blit(text, textRect)
+    text_rect = text.get_rect()
+    text_rect.center = (375, 250)
+    screen.blit(text, text_rect)
 
     points_font = pygame.font.SysFont("Lobster two", 50)
     p1_points = points_font.render(str(board1.points), False, yellow)
-    p1Rect = p1_points.get_rect()
-    p1Rect.center = (750 // 3, 25)
-    screen.blit(p1_points, p1Rect)
+    p1_rect = p1_points.get_rect()
+    p1_rect.center = (750 // 3, 25)
+    screen.blit(p1_points, p1_rect)
 
     p2_points = points_font.render(str(board2.points), False, yellow)
-    p2Rect = p2_points.get_rect()
-    p2Rect.center = (550, 25)
-    screen.blit(p2_points, p2Rect)
+    p2_rect = p2_points.get_rect()
+    p2_rect.center = (550, 25)
+    screen.blit(p2_points, p2_rect)
 
 
 def board1_get_point():
     if ball.rect.x > 690:
         ball.rect.x, ball.rect.y = 375, 250
-        ball.dx = -1
+        ball.d_x = -1
         board1.points += 1
 
 
 def board2_get_point():
     if ball.rect.x < 0:
         ball.rect.x, ball.rect.y = 375, 250
-        ball.dx = 1
+        ball.d_x = 1
         board2.points += 1
 
 
 def ball_move():
-    ball.rect.x += ball.speed * ball.dx
-    ball.rect.y += ball.speed * ball.dy
+    ball.rect.x += ball.speed * ball.d_x
+    ball.rect.y += ball.speed * ball.d_y
 
     if ball.rect.y > 590:
-        ball.dy = -1
+        ball.d_y = -1
 
     if ball.rect.y < 0:
-        ball.dy = 1
+        ball.d_y = 1
 
     if board1.rect.colliderect(ball.rect):
-        ball.dx = 1
+        ball.d_x = 1
 
     if board2.rect.colliderect(ball.rect):
-        ball.dx = -1
+        ball.d_x = -1
 
 
 def redraw():
