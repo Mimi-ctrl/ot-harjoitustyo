@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pygame
 from sprites.ball import Ball
 from sprites.board import Board1, Board2
@@ -48,7 +48,7 @@ def keyboard():
     if key[pygame.K_DOWN]:
         board2.rect.y += BOARD_SPEED
     if key[pygame.K_ESCAPE]:
-        exit()
+        sys.exit()
 
 
 def texts():
@@ -119,5 +119,5 @@ while True:
     pygame.time.delay(50)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            exit()
+            sys.exit()
     redraw()
