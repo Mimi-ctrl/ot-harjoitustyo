@@ -57,7 +57,7 @@ def texts():
 	textRect.center = (375, 250)
 	screen.blit(text, textRect)
 
-	points_font = pygame.font.SysFont("Linux Biolinum Keyboard O",50)
+	points_font = pygame.font.SysFont("Lobster two",50)
 	p1_points = points_font.render(str(board1.points), False, yellow)
 	p1Rect = p1_points.get_rect()
 	p1Rect.center = (750 // 3, 25)
