@@ -6,6 +6,8 @@
 
 [changelog.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[arkkitehtuuri.md](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 #### Ohjelman suorittaminen
 Ohjelma käynnistyy:
