@@ -22,3 +22,8 @@ Muodostaa selaimessa avattavan HTML-muotoisen testikattavuusraportin:
 ```
 poetry run invoke coverage-report
 ```
+#### Pylint
+Suorittaa tiedoston .pylintrc määrittelemät tarkistukset:
+```
+poetry run invoke lint
+```
