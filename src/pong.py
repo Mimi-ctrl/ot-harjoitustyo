@@ -17,7 +17,7 @@ pygame.display.set_caption("Pong")
 icon = pygame.image.load(os.path.join(dirname, "objects", "icon.png"))
 pygame.display.set_icon(icon)
 
-BOARD_SPEED = 90
+BOARD_SPEED = 50
 board1 = Board1()
 board2 = Board2()
 ball = Ball()
