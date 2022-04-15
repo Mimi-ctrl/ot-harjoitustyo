@@ -2,7 +2,7 @@ import os, sys
 import pygame
 from sprites.ball import Ball
 from sprites.board import Board1, Board2
-
+from pygame import mixer
 
 def __init__(self):
     self.points = 0
@@ -25,6 +25,10 @@ ball = Ball()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(board1, board2, ball)
 
+mixer.music.load(os.path.join(dirname, "sounds", "background_music.mp3"))
+mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.3)
+pongSound = mixer.Sound(os.path.join(dirname, "sounds", "pong_sound.wav"))
 
 def boards_max_positions():
     if board1.rect.y <= 0:
@@ -98,13 +102,15 @@ def ball_move():
 
     if board1.rect.colliderect(ball.rect):
         ball.d_x = 1
+        mixer.Sound.play(pongSound)
 
     if board2.rect.colliderect(ball.rect):
         ball.d_x = -1
+        mixer.Sound.play(pongSound)
 
 
 def redraw():
-    screen.fill((255, 131, 250))
+    screen.fill((255,62,150))
     texts()
     all_sprites.draw(screen)
     pygame.display.update()

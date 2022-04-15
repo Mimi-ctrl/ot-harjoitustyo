@@ -15,6 +15,6 @@ class Ball(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-        self.speed = 15
+        self.speed = 20
         self.d_x = 1
         self.d_y = 1
