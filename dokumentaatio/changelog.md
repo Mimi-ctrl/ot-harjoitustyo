@@ -9,3 +9,6 @@
 * Pallo aloittaa keskeltä kun se ei osu lautaan
 * Pisteet näkyvät.
 * Pelin voi sulkea ESC näppäimestä.
+
+#### Viikko 5:
+* Pelissä soi musiikki taustalla ja pallon osuessa lautaan kuuluu ääniefekti.
