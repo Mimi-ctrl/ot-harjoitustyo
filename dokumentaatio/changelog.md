@@ -12,3 +12,4 @@
 
 #### Viikko 5:
 * Pelissä soi musiikki taustalla ja pallon osuessa lautaan kuuluu ääniefekti.
+* Pelin voi laittaa paussille p näppäimestä ja jatkaa pelaamista ENTER näppäimestä.
