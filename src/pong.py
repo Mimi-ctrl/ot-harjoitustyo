@@ -7,7 +7,6 @@ from pygame import mixer
 def __init__(self):
     self.points = 0
 
-
 dirname = os.path.dirname(__file__)
 pygame.init()
 
@@ -53,6 +52,8 @@ def keyboard():
         board2.rect.y += BOARD_SPEED
     if key[pygame.K_ESCAPE]:
         sys.exit()
+    if key[pygame.K_p]:
+        pause()
 
 
 def texts():
@@ -107,6 +108,20 @@ def ball_move():
     if board2.rect.colliderect(ball.rect):
         ball.d_x = -1
         mixer.Sound.play(pongSound)
+        
+def pause():
+    paused = True
+    while paused:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    paused = False
+                elif event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    quit()
 
 
 def redraw():
@@ -119,7 +134,6 @@ def redraw():
     ball_move()
     board1_get_point()
     board2_get_point()
-
 
 while True:
     pygame.time.delay(50)
