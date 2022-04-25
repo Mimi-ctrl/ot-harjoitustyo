@@ -1,11 +1,14 @@
-import os, sys
+import os
+import sys
 import pygame
 from sprites.ball import Ball
 from sprites.board import Board1, Board2
 from pygame import mixer
 
+
 def __init__(self):
     self.points = 0
+
 
 dirname = os.path.dirname(__file__)
 pygame.init()
@@ -28,6 +31,7 @@ mixer.music.load(os.path.join(dirname, "sounds", "background_music.mp3"))
 mixer.music.play(-1)
 pygame.mixer.music.set_volume(0.3)
 pongSound = mixer.Sound(os.path.join(dirname, "sounds", "pong_sound.wav"))
+
 
 def boards_max_positions():
     if board1.rect.y <= 0:
@@ -108,7 +112,8 @@ def ball_move():
     if board2.rect.colliderect(ball.rect):
         ball.d_x = -1
         mixer.Sound.play(pongSound)
-        
+
+
 def pause():
     paused = True
     while paused:
@@ -125,7 +130,7 @@ def pause():
 
 
 def redraw():
-    screen.fill((255,62,150))
+    screen.fill((255, 62, 150))
     texts()
     all_sprites.draw(screen)
     pygame.display.update()
@@ -134,6 +139,7 @@ def redraw():
     ball_move()
     board1_get_point()
     board2_get_point()
+
 
 while True:
     pygame.time.delay(50)

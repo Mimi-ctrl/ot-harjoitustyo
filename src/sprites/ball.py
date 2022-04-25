@@ -9,7 +9,7 @@ ball = pygame.image.load(os.path.join(
 
 
 class Ball(pygame.sprite.Sprite):
-    def __init__(self, x=375, y=250): # pylint: disable=invalid-name
+    def __init__(self, x=375, y=250):  # pylint: disable=invalid-name
         super().__init__()
         self.image = ball
         self.rect = self.image.get_rect()

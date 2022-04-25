@@ -1,6 +1,7 @@
 import unittest
 from pong import Board1, Board2
 
+
 class BoardPosition(unittest.TestCase):
     def setUp(self):
         self.board1 = Board1()
