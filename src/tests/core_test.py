@@ -1,5 +1,5 @@
 import unittest
-from pong import pongSound
+from pong import Pong
 
 
 class TestCore(unittest.TestCase):
