@@ -116,6 +116,7 @@ def ball_move():
 
 def pause():
     paused = True
+    pygame.mixer.music.stop()
     while paused:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -124,6 +125,7 @@ def pause():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     paused = False
+                    pygame.mixer.music.play()
                 elif event.key == pygame.K_ESCAPE:
                     pygame.quit()
                     quit()
