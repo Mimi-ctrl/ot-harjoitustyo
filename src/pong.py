@@ -10,7 +10,7 @@ def __init__(self):
     self.points = 0
 
 
-dirname = os.path.dirname(__file__) #image.py
+dirname = os.path.dirname(__file__)  # image.py
 pygame.init()
 
 screen = pygame.display.set_mode((750, 650))
@@ -27,13 +27,15 @@ ball = Ball()
 all_sprites = pygame.sprite.Group()
 all_sprites.add(board1, board2, ball)
 
-mixer.music.load(os.path.join(dirname, "sounds", "background_music.mp3"))#music.py
-mixer.music.play(-1)#music.py
-pygame.mixer.music.set_volume(0.3)#music.py
-pongSound = mixer.Sound(os.path.join(dirname, "sounds", "pong_sound.wav"))#music.py
+mixer.music.load(os.path.join(dirname, "sounds",
+                 "background_music.mp3"))  # music.py
+mixer.music.play(-1)  # music.py
+pygame.mixer.music.set_volume(0.3)  # music.py
+pongSound = mixer.Sound(os.path.join(
+    dirname, "sounds", "pong_sound.wav"))  # music.py
 
 
-def boards_max_positions(): #game_object_move.py
+def boards_max_positions():  # game_object_move.py
     if board1.rect.y <= 0:
         board1.rect.y = 0
     if board2.rect.y <= 0:
@@ -44,7 +46,7 @@ def boards_max_positions(): #game_object_move.py
         board2.rect.y = 525
 
 
-def keyboard(): #game_object_move.py
+def keyboard():  # game_object_move.py
     key = pygame.key.get_pressed()
     if key[pygame.K_w]:
         board1.rect.y -= BOARD_SPEED
@@ -81,21 +83,21 @@ def texts():
     screen.blit(p2_points, p2_rect)
 
 
-def board1_get_point(): #game_object_move.py
+def board1_get_point():  # game_object_move.py
     if ball.rect.x > 690:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = -1
         board1.points += 1
 
 
-def board2_get_point(): #game_object_move.py
+def board2_get_point():  # game_object_move.py
     if ball.rect.x < 0:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = 1
         board2.points += 1
 
 
-def ball_move(): #game_object_move.py
+def ball_move():  # game_object_move.py
     ball.rect.x += ball.speed * ball.d_x
     ball.rect.y += ball.speed * ball.d_y
 
@@ -131,7 +133,7 @@ def pause():
                     quit()
 
 
-def redraw(): #pong.py
+def redraw():  # pong.py
     screen.fill((255, 62, 150))
     texts()
     all_sprites.draw(screen)
@@ -143,7 +145,7 @@ def redraw(): #pong.py
     board2_get_point()
 
 
-while True: #pong.py
+while True:  # pong.py
     pygame.time.delay(50)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
