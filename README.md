@@ -12,37 +12,43 @@
 [releases](https://github.com/Mimi-ctrl/ot-harjoitustyo/releases)
 
 ## Asennus
-1. Asenna riippuvuudet:
+
+‼️ Ennen asennusta lataa viimeisin [releasen](https://github.com/Mimi-ctrl/ot-harjoitustyo/releases) lähdekoodi.
+
+1. Avaa terminaali ja siirry kansioon "ot-harjoitustyo" ja sieltä kansioon "src". Asenna riippuvuudet komennolla:
 ```
 poetry install
 ```
-2. Suorita vaadittavat alustustoimenpiteet:
+2. Suorita vaadittavat alustustoimenpiteet komennolla:
 ```
 poetry run invoke build
 ```
-3. Käynnistä sovellus:
+3. Käynnistä sovellus komennolla:
 ```
 poetry run invoke start
 ```
 
 ## Komentorivitoiminnot
+
+‼️ Ennen kuin suoritat komentorivitoimintoja siirry kansioon "ot-harjoitustyo" ja sieltä kansioon "src". 
+
 #### Ohjelman suorittaminen
-Ohjelma käynnistyy:
+Ohjelma käynnistyy komennolla:
 ```
 poetry run invoke start
 ```
 #### Testaus
-Suorittaa testit pytestin avulla:
+Suorita testit komennolla:
 ```
 poetry run invoke test
 ```
 #### Testikattavuus
-Muodostaa selaimessa avattavan HTML-muotoisen testikattavuusraportin:
+Muodosta selaimessa avattava HTML-muotoinen testikattavuusraportti komennolla:
 ```
 poetry run invoke coverage-report
 ```
 #### Pylint
-Suorittaa tiedoston [.pylintrc](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/.pylintrc) määrittelemät tarkistukset:
+Suorita tiedoston [.pylintrc](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/.pylintrc) määrittelemät tarkistukset komennolla:
 ```
 poetry run invoke lint
 ```
