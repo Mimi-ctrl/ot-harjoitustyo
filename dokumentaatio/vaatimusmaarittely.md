@@ -4,9 +4,9 @@
 Käyttäjä pystyy sovelluksen avulla pelaamaan pong peliä. Peliä pystyy pelaamaan 2 käyttäjää samaan aikaan samalta näppäimistöltä.
 
 ### Sovelluksen ulkonäkö
-Sovellus näyttää tällä hetkellä tältä:
 
-![Kuvakaappaus - 2022-04-12 15-58-15](https://user-images.githubusercontent.com/56686737/162968802-253e7ea0-9c68-462c-bd3a-172d48e3cd9d.jpg)
+![Kuvakaappaus - 2022-05-02 13-45-19](https://user-images.githubusercontent.com/56686737/166222623-f6519870-1f5a-42d4-b758-00b9ad9f3bff.png)
+
 ### Toiminnallisuudet
 #### Pelin kulku
 * Käyttäjä pystyy aloittamaan pelin painamalla enter näppäintä. :x:
