@@ -16,11 +16,11 @@
 ```
 poetry install
 ```
-3. Suorita vaadittavat alustustoimenpiteet:
+2. Suorita vaadittavat alustustoimenpiteet:
 ```
 poetry run invoke build
 ```
-5. Käynnistä sovellus:
+3. Käynnistä sovellus:
 ```
 poetry run invoke start
 ```
