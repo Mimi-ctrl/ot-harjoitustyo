@@ -3,7 +3,7 @@
 ### Sovelluksen tarkoitus
 Käyttäjä pystyy sovelluksen avulla pelaamaan pong peliä. Peliä pystyy pelaamaan 2 käyttäjää samaan aikaan samalta näppäimistöltä.
 
-### Sovelluksen ulkonäkö:
+### Sovelluksen ulkonäkö
 
 ![Kuvakaappaus - 2022-05-02 13-45-19](https://user-images.githubusercontent.com/56686737/166222623-f6519870-1f5a-42d4-b758-00b9ad9f3bff.png)
 
