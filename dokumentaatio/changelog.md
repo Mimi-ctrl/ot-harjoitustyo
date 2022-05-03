@@ -13,3 +13,8 @@
 #### Viikko 5:
 * Pelissä soi musiikki taustalla ja pallon osuessa lautaan kuuluu ääniefekti.
 * Pelin voi laittaa paussille p näppäimestä ja jatkaa pelaamista ENTER näppäimestä.
+
+#### Viikko 6:
+* Peli päättyy 20 pisteeseen ja siirtyy toiseen näkymään. Pisteet nollautuvat
+* Pelin pystyy aloittamaan alusta.
+* Pelissä on alkunäkymä.
