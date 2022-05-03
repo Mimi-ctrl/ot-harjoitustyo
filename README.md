@@ -1,15 +1,17 @@
 # Pong peli :red_circle:
 
 ## Dokumentaatiot
-[vaatimusmaarittely](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmaarittely](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[tuntikirjanpito](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-[changelog](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+[Changelog](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-[arkkitehtuuri](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+[Arkkitehtuuri](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[releases](https://github.com/Mimi-ctrl/ot-harjoitustyo/releases)
+[Releases](https://github.com/Mimi-ctrl/ot-harjoitustyo/releases)
+
+[Käyttöohje](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ## Asennus
 
