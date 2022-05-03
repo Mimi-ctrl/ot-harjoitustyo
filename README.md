@@ -44,6 +44,8 @@ Muodosta selaimessa avattava HTML-muotoinen testikattavuusraportti komennolla:
 poetry run invoke coverage-report
 ```
 #### Pylint
+‼️ Siirry ensin kansion "ot-harjoitustyo" sisälle.
+
 Suorita tiedoston [.pylintrc](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/.pylintrc) määrittelemät tarkistukset komennolla:
 ```
 poetry run invoke lint
