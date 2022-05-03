@@ -33,6 +33,10 @@ pongSound = mixer.Sound(os.path.join(dirname, "sounds", "pong_sound.wav"))
 
 
 def boards_max_positions(): 
+    """ Determines the maximum positions of the boards.
+        If boards coordinate in y axel is bigger than 525 or smaller than 0,
+        boards coordinate in y axel not getting bigger or smaller.
+    """
     if board1.rect.y <= 0:
         board1.rect.y = 0
     if board2.rect.y <= 0:
@@ -134,7 +138,10 @@ def pause_text():
     screen.blit(text, text_rect)
 
 
-def board1_get_point():  
+def board1_get_point(): 
+    """ When the coordinate of the ball on the x-axis is bigger than 690, 
+        the ball moves to the center and board 1 gets a point.
+    """ 
     if ball.rect.x > 690:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = -1
@@ -142,6 +149,9 @@ def board1_get_point():
 
 
 def board2_get_point(): 
+    """ When the coordinate of the ball on the x-axis is smaller than 0, 
+        the ball moves to the center and board 2 gets a point.
+    """ 
     if ball.rect.x < 0:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = 1
