@@ -12,16 +12,12 @@ Käyttäjä pystyy sovelluksen avulla pelaamaan pong peliä. Peliä pystyy pelaa
 
 ### Toiminnallisuudet
 #### Pelin kulku
-* Käyttäjä pystyy aloittamaan pelin painamalla enter näppäintä. :heavy_check_mark:
-* Käyttäjä pystyy laittamaan pelin tauolle p näppäimellä ja jatkamaan pelaamista enter näppäintä painamalla :heavy_check_mark:
-* Pelissä tulee osua palloon laudalla jolloin se kimpoaa takaisin riippuen mihin kohtaa lautaa pallo osuu. :heavy_check_mark:
-* Peli päättyy, kun toisella pelaajista on kertynyt 20 pistettä. Pisteet nollautuvat samalla. :heavy_check_mark:
+* Käyttäjä pystyy aloittamaan pelin painamalla enter näppäintä. 
+* Käyttäjä pystyy laittamaan pelin tauolle p näppäimellä ja jatkamaan pelaamista enter näppäintä painamalla 
+* Pelissä tulee osua palloon laudalla jolloin se kimpoaa takaisin riippuen mihin kohtaa lautaa pallo osuu. 
+* Peli päättyy, kun toisella pelaajista on kertynyt 20 pistettä. Pisteet nollautuvat samalla. 
 #### Ohjaus
-* Pelissä olevia lautoja liikutetaan nuolinäppäimillä ja näppäimillä w ja s. Lautoja voidaan liikuttaa vain ylös ja alas. :heavy_check_mark:
+* Pelissä olevia lautoja liikutetaan nuolinäppäimillä ja näppäimillä w ja s. Lautoja voidaan liikuttaa vain ylös ja alas. 
 #### Pisteytys
-* Jos pelaaja ei osu laudalla palloon niin vasta pelaaja saa pisteen. :heavy_check_mark:
-### Jatkokehitysideoita :x:
-Sovelluksessa olisi valikko, josta voitaisiin muuttaa:
-* pallon nopeutta. 
-* pelin ulkonäköä.
-* pistemäärää josta peli menee poikki.
+* Jos pelaaja ei osu laudalla palloon niin vasta pelaaja saa pisteen.
+
