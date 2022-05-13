@@ -102,6 +102,8 @@ def pause():
 
 
 def start():
+    board1.points = 0
+    board2.points = 0
     pygame.mixer.music.stop()
     intro = True
     while intro:
