@@ -50,6 +50,15 @@ def board_get_point():
 
 
 def ball_move():  
+    """ Control the coordinates of the ball on the playing field by 
+        changing its x and y coordinates. This is done by multiplying by 
+        one or minus one the speed of the ball. If the y-coordinate of the 
+        ball is less than or greater than the y-coordinates of the playing area,
+        the direction of the ball with the y-coordinate is reversed by changing 
+        one to positive or negative. If the coordinate of the ball on the x-axis 
+        is the same as on the board then the direction on the x-axis is reversed 
+        and a sound effect is played.
+    """
     ball.rect.x += ball.speed * ball.d_x
     ball.rect.y += ball.speed * ball.d_y
 
@@ -68,6 +77,9 @@ def ball_move():
         sound()
 
 def keyboard():  
+    """ Performs the function when the key is pressed. 
+        For example, pressing the down or up arrow key moves the board.
+    """
     key = pygame.key.get_pressed()
     if key[pygame.K_w]:
         board1.rect.y -= BOARD_SPEED
