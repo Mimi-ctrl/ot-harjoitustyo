@@ -24,7 +24,7 @@ def game_texts():
     screen.blit(p2_points, p2_rect)
 
 def start_text():
-    screen.fill((255, 62, 150)) 
+    screen.fill((255, 62, 150))
     bong_font = pygame.font.SysFont("Lobster two", 35)
     second_bong_font = pygame.font.SysFont("Lobster two", 60)
     text = second_bong_font.render("PONG", False, yellow)
@@ -37,7 +37,7 @@ def start_text():
     screen.blit(text1, text_rect1)
 
 def end_text():
-    screen.fill((255, 62, 150)) 
+    screen.fill((255, 62, 150))
     bong_font = pygame.font.SysFont("Lobster two", 45)
     winner = ""
     if game_loop.board1.points > game_loop.board2.points:

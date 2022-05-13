@@ -17,7 +17,7 @@ all_sprites.add(board1, board2, ball)
 def __init__(self):
     self.points = 0
 
-def boards_max_positions(): 
+def boards_max_positions():
     """ Determines the maximum positions of the boards.
         If boards coordinate in y axel is bigger than 525 or smaller than 0,
         boards coordinate in y axel not getting bigger or smaller.
@@ -32,31 +32,31 @@ def boards_max_positions():
         board2.rect.y = 525
 
 
-def board_get_point(): 
-    """ When the coordinate of the ball on the x-axis is bigger than 690, 
+def board_get_point():
+    """ When the coordinate of the ball on the x-axis is bigger than 690,
         the ball moves to the center and board 1 gets a point.
-        When the coordinate of the ball on the x-axis is smaller than 0, 
+        When the coordinate of the ball on the x-axis is smaller than 0,
         the ball moves to the center and board 2 gets a point.
-    """ 
+    """
     if ball.rect.x > 690:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = -1
         board1.points += 1
-        
+
     if ball.rect.x < 0:
         ball.rect.x, ball.rect.y = 375, 250
         ball.d_x = 1
         board2.points += 1
 
 
-def ball_move():  
-    """ Control the coordinates of the ball on the playing field by 
-        changing its x and y coordinates. This is done by multiplying by 
-        one or minus one the speed of the ball. If the y-coordinate of the 
+def ball_move():
+    """ Control the coordinates of the ball on the playing field by
+        changing its x and y coordinates. This is done by multiplying by
+        one or minus one the speed of the ball. If the y-coordinate of the
         ball is less than or greater than the y-coordinates of the playing area,
-        the direction of the ball with the y-coordinate is reversed by changing 
-        one to positive or negative. If the coordinate of the ball on the x-axis 
-        is the same as on the board then the direction on the x-axis is reversed 
+        the direction of the ball with the y-coordinate is reversed by changing
+        one to positive or negative. If the coordinate of the ball on the x-axis
+        is the same as on the board then the direction on the x-axis is reversed
         and a sound effect is played.
     """
     ball.rect.x += ball.speed * ball.d_x
@@ -76,8 +76,8 @@ def ball_move():
         ball.d_x = -1
         sound()
 
-def keyboard():  
-    """ Performs the function when the key is pressed. 
+def keyboard():
+    """ Performs the function when the key is pressed.
         For example, pressing the down or up arrow key moves the board.
     """
     key = pygame.key.get_pressed()
@@ -101,14 +101,14 @@ def pause():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     paused = False
                     pygame.mixer.music.play(-1)
                 elif event.key == pygame.K_ESCAPE:
                     pygame.quit()
-                    quit()
+                    sys.exit()
         pause_text()
         pygame.display.update()
 
@@ -122,14 +122,14 @@ def start():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     intro = False
                     pygame.mixer.music.play(-1)
                 elif event.key == pygame.K_ESCAPE:
                     pygame.quit()
-                    quit()
+                    sys.exit()
         start_text()
         pygame.display.update()
 
@@ -141,18 +141,18 @@ def end():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     end = False
                 elif event.key == pygame.K_ESCAPE:
                     pygame.quit()
-                    quit()
+                    sys.exit()
         end_text()
         pygame.display.update()
 
 
-def redraw():  
+def redraw():
     screen.fill((255, 62, 150))
     game_texts()
     all_sprites.draw(screen)
@@ -163,10 +163,11 @@ def redraw():
     board_get_point()
 
 
-def game_loop():   
-    while board1.points != 20 and board2.points != 20:  
+def game_loop():
+    while board1.points != 20 and board2.points != 20:
         pygame.time.delay(50)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
         redraw()
+        
