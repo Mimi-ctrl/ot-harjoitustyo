@@ -1,5 +1,5 @@
 import pygame
-from others import music, icon
+from files import music, icon
 from game_loop import start, game_loop, end
 
 pygame.init()

@@ -1,7 +1,6 @@
 import sys
 import pygame
-from others import sound
-from others import screen
+from files import sound, screen
 from sprites.board import Board1, Board2
 from sprites.ball import Ball
 from text import game_texts, end_text, start_text, pause_text

@@ -1,5 +1,5 @@
 import pygame
-from others import screen
+from files import screen
 import game_loop
 
 yellow = 255, 255, 0
