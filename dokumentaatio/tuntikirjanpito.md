@@ -10,5 +10,6 @@
 |26.4.22     |1 h            |Musiikki pysähtyy tauolla.                                                                    |
 |3.5.22      |5 h            |Peliin lisätty alku näkymä ja peli päättyy 20 pisteeseen.                                     |
 |11.5.22     |5 h            |Siirsin koodia pois yhdestä tiedostosta, sekä siistin koodia.                                 |
-| Yhteensä:  |39 h           |                                                                                              |
+|14.5.22     |3 h            |Tehty testejä sekä lisätty docstringeja.                                                      |
+| Yhteensä:  |42 h           |                                                                                              |
 
