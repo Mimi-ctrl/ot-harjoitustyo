@@ -94,6 +94,9 @@ def keyboard():
         pause()
 
 def pause():
+    """ When calling a pause, the pause mode is set to true and the pause text
+        is displayed until ENTER is pressed and the pause mode is false.
+    """
     paused = True
     pygame.mixer.music.stop()
     while paused:
