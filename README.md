@@ -1,5 +1,5 @@
 # Pong peli :red_circle:
-
+Käyttäjä pystyy pelaamaan sovelluksella pong peliä. Peliä voi pelata kaksi käyttäjää saman aikaisesti samalta näppäimistöltä.
 ## Dokumentaatiot
 [Vaatimusmaarittely](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
