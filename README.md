@@ -54,5 +54,9 @@ Suorita tiedoston [.pylintrc](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/
 ```
 poetry run invoke lint
 ```
+Kyseinen komento ei toimi jostain syystä vaan tulostaa ohjeita, joten käytä:
+```
+pylint src
+```
 ## HUOM‼️
 Sovellusta on testattu Python 3.8. versiolla.
