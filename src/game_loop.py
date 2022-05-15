@@ -12,10 +12,6 @@ BOARD_SPEED = 50
 all_sprites = pygame.sprite.Group()
 all_sprites.add(board1, board2, ball)
 
-
-def __init__(self):
-    self.points = 0
-
 def boards_max_positions():
     """ Determines the maximum positions of the boards.
         If boards coordinate in y axel is bigger than 525 or smaller than 0,
@@ -116,6 +112,11 @@ def pause():
 
 
 def start():
+    """ When the start is called, the scores on the boards are reset,
+        the music is put off and the intro is set to true. The initial
+        view is repeated until the player presses enter to start the
+        game and the value of the intro becomes false or esc at which point the game window closes.
+    """
     board1.points = 0
     board2.points = 0
     pygame.mixer.music.stop()
@@ -137,6 +138,10 @@ def start():
 
 
 def end():
+    """ When the end is called, the music goes off and the value of the end is given as true.
+        Then repeat the end view until you press enter, at which point the end value becomes
+        false and a new game or esc begins to exit the game.
+    """
     pygame.mixer.music.stop()
     end = True
     while end:
@@ -155,6 +160,8 @@ def end():
 
 
 def redraw():
+    """ Call functions, define the size of the game window, and draw objects in the game view.
+    """
     screen.fill((255, 62, 150))
     game_texts()
     all_sprites.draw(screen)
@@ -166,6 +173,8 @@ def redraw():
 
 
 def game_loop():
+    """ Call redraw until one of the two boards has twenty points.
+    """
     while board1.points != 20 and board2.points != 20:
         pygame.time.delay(50)
         for event in pygame.event.get():
