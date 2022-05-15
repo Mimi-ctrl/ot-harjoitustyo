@@ -3,7 +3,7 @@ import pygame
 
 dirname = os.path.dirname(__file__)
 
-board = pygame.image.load(os.path.join(dirname, "..", "objects", "board1.png"))
+board = pygame.image.load(os.path.join(dirname, "..", "objects", "board.png"))
 
 
 class Board1(pygame.sprite.Sprite):
