@@ -13,6 +13,8 @@ Käyttäjä pystyy pelaamaan sovelluksella pong peliä. Peliä voi pelata kaksi 
 
 [Käyttöohje](https://github.com/Mimi-ctrl/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+Testaus
+
 ## Asennus
 
 ‼️ Ennen asennusta lataa viimeisin [releasen](https://github.com/Mimi-ctrl/ot-harjoitustyo/releases) lähdekoodi.
