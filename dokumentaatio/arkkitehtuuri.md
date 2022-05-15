@@ -2,19 +2,15 @@
 # Arkkitehtuurikuvaus
 
 ## Rakenne
+Koodin rakenne näyttää tältä:
 
-Koodin rakenne näyttää tällähetkellä tältä:
-
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/56686737/163019449-ea1e9e11-a54d-4a01-9250-c93e329b5545.png)
-
-
-Tarkoitus olisi vielä eritellä Pong tiedoston koodi pienempiin osiin eri tiedostoihin, tämä tekisi koodista helpommin käsiteltävää. Lisäksi aion todennäköisesti luoda tietokannan jossa pidän tallessa mm. pallon nopeuksia. 
+![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/56686737/168472440-0c8d746d-e3b2-46c6-b136-483cb137c9f6.png)
 
 ## Käyttöliittymä
 
-Lopullisessa käyttöliittymässä on:
-* Valikko josta pelaaja voi säätää pelin ominaisuuksia, poistua pelistä ja aloittamaan pelin.
-* Itse peli näkymä, josta voi palata takaisin valikkoon.
+Käyttöliittymässä on:
+* Aloitus näkymä, josta löytyy ohjeita.
+* Itse peli näkymä.
+* Lopetus näkymä, jossa ilmoitetaan pelin voittaja ja voidaan palata aloitus näkymään.
 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/56686737/165344996-9a76faa1-be7b-4c4d-b4d0-ccb6fb533041.png)
-
+![Untitled Diagram drawio(2)](https://user-images.githubusercontent.com/56686737/168472770-8f4a5496-f906-4123-a59a-d44829cd2223.png)
