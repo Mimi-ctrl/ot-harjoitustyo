@@ -18,3 +18,7 @@
 * Peli päättyy 20 pisteeseen ja siirtyy toiseen näkymään. Pisteet nollautuvat
 * Pelin pystyy aloittamaan alusta.
 * Pelissä on alkunäkymä.
+
+#### Viikko 7:
+* Ohjelmaan lisätty docstring kommentteja.
+* Ohjelman koodia eritelty useampaan tiedostoon.
