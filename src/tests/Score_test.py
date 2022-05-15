@@ -1,7 +1,7 @@
 import unittest
 from game_loop import BOARD1, BOARD2, BALL, board_get_point
 
-class TestCore(unittest.TestCase):
+class TestScore(unittest.TestCase):
     def setUp(self):
         self.b1 = BOARD1
         self.b2 = BOARD2
