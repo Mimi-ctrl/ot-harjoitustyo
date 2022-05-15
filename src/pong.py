@@ -8,8 +8,6 @@ music()
 icon()
 
 while True:
-    """ Called a function.
-    """
     start()
     game_loop()
     end()

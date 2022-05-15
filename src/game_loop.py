@@ -1,74 +1,74 @@
 import sys
 import pygame
-from files import sound, screen
+from files import sound, SCREEN
 from sprites.board import Board1, Board2
 from sprites.ball import Ball
 from text import game_texts, end_text, start_text, pause_text
 
-board1 = Board1()
-board2 = Board2()
-ball = Ball()
+BOARD1 = Board1()
+BOARD2 = Board2()
+BALL = Ball()
 BOARD_SPEED = 50
-all_sprites = pygame.sprite.Group()
-all_sprites.add(board1, board2, ball)
+ALL_SPRITES = pygame.sprite.Group()
+ALL_SPRITES.add(BOARD1, BOARD2, BALL)
 
 def boards_max_positions():
     """ Determines the maximum positions of the boards.
         If boards coordinate in y axel is bigger than 525 or smaller than 0,
         boards coordinate in y axel not getting bigger or smaller.
     """
-    if board1.rect.y <= 0:
-        board1.rect.y = 0
-    if board2.rect.y <= 0:
-        board2.rect.y = 0
-    if board1.rect.y >= 525:
-        board1.rect.y = 525
-    if board2.rect.y >= 525:
-        board2.rect.y = 525
+    if BOARD1.rect.y <= 0:
+        BOARD1.rect.y = 0
+    if BOARD2.rect.y <= 0:
+        BOARD2.rect.y = 0
+    if BOARD1.rect.y >= 525:
+        BOARD1.rect.y = 525
+    if BOARD2.rect.y >= 525:
+        BOARD2.rect.y = 525
 
 
 def board_get_point():
-    """ When the coordinate of the ball on the x-axis is bigger than 690,
-        the ball moves to the center and board 1 gets a point.
-        When the coordinate of the ball on the x-axis is smaller than 0,
-        the ball moves to the center and board 2 gets a point.
+    """ When the coordinate of the BALL on the x-axis is bigger than 690,
+        the BALL moves to the center and board 1 gets a point.
+        When the coordinate of the BALL on the x-axis is smaller than 0,
+        the BALL moves to the center and board 2 gets a point.
     """
-    if ball.rect.x > 690:
-        ball.rect.x, ball.rect.y = 375, 250
-        ball.d_x = -1
-        board1.points += 1
+    if BALL.rect.x > 690:
+        BALL.rect.x, BALL.rect.y = 375, 250
+        BALL.d_x = -1
+        BOARD1.points += 1
 
-    if ball.rect.x < 0:
-        ball.rect.x, ball.rect.y = 375, 250
-        ball.d_x = 1
-        board2.points += 1
+    if BALL.rect.x < 0:
+        BALL.rect.x, BALL.rect.y = 375, 250
+        BALL.d_x = 1
+        BOARD2.points += 1
 
 
 def ball_move():
-    """ Control the coordinates of the ball on the playing field by
+    """ Control the coordinates of the BALL on the playing field by
         changing its x and y coordinates. This is done by multiplying by
-        one or minus one the speed of the ball. If the y-coordinate of the
-        ball is less than or greater than the y-coordinates of the playing area,
-        the direction of the ball with the y-coordinate is reversed by changing
-        one to positive or negative. If the coordinate of the ball on the x-axis
+        one or minus one the speed of the BALL. If the y-coordinate of the
+        BALL is less than or greater than the y-coordinates of the playing area,
+        the direction of the BALL with the y-coordinate is reversed by changing
+        one to positive or negative. If the coordinate of the BALL on the x-axis
         is the same as on the board then the direction on the x-axis is reversed
         and a sound effect is played.
     """
-    ball.rect.x += ball.speed * ball.d_x
-    ball.rect.y += ball.speed * ball.d_y
+    BALL.rect.x += BALL.speed * BALL.d_x
+    BALL.rect.y += BALL.speed * BALL.d_y
 
-    if ball.rect.y > 590:
-        ball.d_y = -1
+    if BALL.rect.y > 590:
+        BALL.d_y = -1
 
-    if ball.rect.y < 0:
-        ball.d_y = 1
+    if BALL.rect.y < 0:
+        BALL.d_y = 1
 
-    if board1.rect.colliderect(ball.rect):
-        ball.d_x = 1
+    if BOARD1.rect.colliderect(BALL.rect):
+        BALL.d_x = 1
         sound()
 
-    if board2.rect.colliderect(ball.rect):
-        ball.d_x = -1
+    if BOARD2.rect.colliderect(BALL.rect):
+        BALL.d_x = -1
         sound()
 
 def keyboard():
@@ -77,13 +77,13 @@ def keyboard():
     """
     key = pygame.key.get_pressed()
     if key[pygame.K_w]:
-        board1.rect.y -= BOARD_SPEED
+        BOARD1.rect.y -= BOARD_SPEED
     if key[pygame.K_s]:
-        board1.rect.y += BOARD_SPEED
+        BOARD1.rect.y += BOARD_SPEED
     if key[pygame.K_UP]:
-        board2.rect.y -= BOARD_SPEED
+        BOARD2.rect.y -= BOARD_SPEED
     if key[pygame.K_DOWN]:
-        board2.rect.y += BOARD_SPEED
+        BOARD2.rect.y += BOARD_SPEED
     if key[pygame.K_ESCAPE]:
         sys.exit()
     if key[pygame.K_p]:
@@ -117,8 +117,8 @@ def start():
         view is repeated until the player presses enter to start the
         game and the value of the intro becomes false or esc at which point the game window closes.
     """
-    board1.points = 0
-    board2.points = 0
+    BOARD1.points = 0
+    BOARD2.points = 0
     pygame.mixer.music.stop()
     intro = True
     while intro:
@@ -162,9 +162,9 @@ def end():
 def redraw():
     """ Call functions, define the size of the game window, and draw objects in the game view.
     """
-    screen.fill((255, 62, 150))
+    SCREEN.fill((255, 62, 150))
     game_texts()
-    all_sprites.draw(screen)
+    ALL_SPRITES.draw(SCREEN)
     pygame.display.update()
     keyboard()
     boards_max_positions()
@@ -175,7 +175,7 @@ def redraw():
 def game_loop():
     """ Call redraw until one of the two boards has twenty points.
     """
-    while board1.points != 20 and board2.points != 20:
+    while BOARD1.points != 20 and BOARD2.points != 20:
         pygame.time.delay(50)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
